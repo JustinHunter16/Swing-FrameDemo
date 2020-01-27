@@ -1,9 +1,6 @@
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import javax.swing.*;        
  
-/* FrameDemo.java requires no other files. */
-public class FrameDemo {
+public class HelloWorldSwing {
     /**
      * Create the GUI and show it.  For thread safety,
      * this method should be invoked from the
@@ -11,16 +8,16 @@ public class FrameDemo {
      */
     private static void createAndShowGUI() {
         //Create and set up the window.
-        JFrame frame = new JFrame("FrameDemo");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(1920, 1080);
-        JLabel emptyLabel = new JLabel("");
-        emptyLabel.setPreferredSize(new Dimension(500, 500));
-        frame.getContentPane().add(emptyLabel, BorderLayout.CENTER);
+        JFrame myFrame = new JFrame("HelloWorldSwing");
+        myFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        //Add the ubiquitous "Hello World" label.
+        JLabel label = new JLabel("Goodbye world");
+        myFrame.getContentPane().add(label);
  
         //Display the window.
-        frame.pack();
-        frame.setVisible(true);
+        myFrame.pack();
+        myFrame.setVisible(true);
     }
  
     public static void main(String[] args) {
